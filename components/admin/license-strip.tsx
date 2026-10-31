@@ -25,7 +25,7 @@ export function LicenseStrip({ detail = false }: { detail?: boolean }) {
     >
       <div className="ops-panel-heading">
         <div className="ops-inline">
-          <h2>GitLab 라이선스</h2>
+          <h2>깃랩 라이선스</h2>
           <span className={available ? "ops-tag live" : "ops-tag"}>
             {state}
           </span>

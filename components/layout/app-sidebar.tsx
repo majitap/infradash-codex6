@@ -74,7 +74,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
           href="/"
           onClick={close}
           className="brand-link"
-          aria-label="InfraDash 홈"
+          aria-label="인프라대시 홈"
         >
           <svg
             width="32"
@@ -109,16 +109,16 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
             />
           </svg>
           <span>
-            infradash<span className="brand-period">.</span>
+            인프라대시<span className="brand-period">.</span>
           </span>
         </Link>
       </SidebarHeader>
       <SidebarContent className="nav-content">
         <div className="workspace-label">
-          <span className="workspace-symbol">M</span>
+          <span className="workspace-symbol">마</span>
           <div>
-            <strong>Majitap</strong>
-            <span>GitLab 워크스페이스</span>
+            <strong>마지탭</strong>
+            <span>깃랩 운영 공간</span>
           </div>
         </div>
         <nav aria-label="주 메뉴" className="nav-sections">
@@ -136,17 +136,17 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
       </SidebarContent>
       <SidebarFooter className="nav-footer">
         <div className="sidebar-person">
-          <span className="person-avatar">M</span>
+          <span className="person-avatar">마</span>
           <div>
-            <strong>{session?.actor.name ?? "Majitap"}</strong>
+            <strong>{session?.actor.name ?? "마지탭"}</strong>
             <span>
               {adminMode
                 ? configured
                   ? "관리자 모드"
                   : "데모 관리자 모드"
                 : configured
-                  ? "운영 워크스페이스"
-                  : "데모 워크스페이스"}
+                  ? "운영 공간"
+                  : "예시 운영 공간"}
             </span>
           </div>
         </div>

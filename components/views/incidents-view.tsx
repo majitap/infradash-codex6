@@ -139,7 +139,7 @@ export function IncidentsView() {
 
         <Card>
           <CardHeader>
-            <CardTitle>월별 MTTR</CardTitle>
+            <CardTitle>월별 평균 복구 시간</CardTitle>
             <CardDescription>평균 해결 시간 (분) · 최근 6개월</CardDescription>
           </CardHeader>
           <CardContent>

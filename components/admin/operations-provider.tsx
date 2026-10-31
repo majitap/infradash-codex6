@@ -261,8 +261,8 @@ export function OperationsProvider({
       );
       toast.success(
         result.source === "demo"
-          ? "데모 설정을 변경했습니다. 실제 GitLab에는 적용되지 않습니다."
-          : "GitLab 변경 결과를 다시 조회해 확인했습니다.",
+          ? "데모 설정을 변경했습니다. 실제 깃랩에는 적용되지 않습니다."
+          : "깃랩 변경 결과를 다시 조회해 확인했습니다.",
       );
     } catch (error) {
       if (configured) {

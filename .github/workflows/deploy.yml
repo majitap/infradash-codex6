@@ -44,6 +44,10 @@ jobs:
 
       - name: Build static export
         run: npm run build
+        env:
+          NEXT_PUBLIC_DASHBOARD_URL: ${{ vars.NEXT_PUBLIC_DASHBOARD_URL }}
+          NEXT_PUBLIC_INFRA_STATUS_URL: ${{ vars.NEXT_PUBLIC_INFRA_STATUS_URL }}
+          NEXT_PUBLIC_OPERATIONS_API_URL: ${{ vars.NEXT_PUBLIC_OPERATIONS_API_URL }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4

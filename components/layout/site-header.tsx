@@ -9,6 +9,7 @@ import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { useCommandMenu } from "@/components/layout/command-menu";
 import { useOperations } from "@/components/admin/operations-provider";
 import { findNavItem } from "@/lib/nav";
+import { CompactLicense } from "@/components/overview/compact-status";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -32,11 +33,12 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="header-location">
         <SidebarTrigger className="md:hidden size-10" />
-        <span className="hidden lg:inline">워크스페이스</span>
+        <span className="hidden lg:inline">운영 공간</span>
         <ChevronRight className="hidden lg:block" size={16} />
         <span>{title}</span>
       </div>
       <div className="header-actions">
+        <CompactLicense />
         <button
           className="header-search"
           onClick={() => setOpen(true)}
@@ -50,14 +52,14 @@ export function SiteHeader() {
         <DropdownMenu>
           <DropdownMenuTrigger
             className="header-icon notification-trigger"
-            aria-label="운영 알림 2건"
+            aria-label="예시 알림 2건"
           >
             <Bell size={20} />
             <span />
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="notification-menu">
             <DropdownMenuGroup>
-              <DropdownMenuLabel>확인이 필요한 알림 · 2건</DropdownMenuLabel>
+              <DropdownMenuLabel>예시 알림 · 2건</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem render={<Link href="/incidents" />}>
                 <span className="notification-item">

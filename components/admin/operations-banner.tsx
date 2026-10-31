@@ -11,7 +11,7 @@ export function OperationsBanner() {
           {maintenance?.enabled
             ? maintenance.source === "demo"
               ? "메인터넌스 미리보기"
-              : "GitLab 메인터넌스 중"
+              : "깃랩 메인터넌스 중"
             : configured
               ? "관리자 모드"
               : "데모 관리자 모드"}
@@ -21,7 +21,7 @@ export function OperationsBanner() {
             ? maintenance.message
             : configured
               ? "설정 변경은 관리자 권한으로 확인 후 적용됩니다."
-              : "이 브라우저에서만 체험하며 실제 GitLab은 변경하지 않습니다."}
+              : "이 브라우저에서만 체험하며 실제 깃랩은 변경하지 않습니다."}
         </span>
       </div>
       <div className="ops-inline">

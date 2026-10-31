@@ -72,7 +72,7 @@ export function DoraView() {
       {/* Service-Level DORA Table */}
       <div className="rounded-3xl border border-slate-200/70 bg-white p-6 shadow-xs flex flex-col gap-4">
         <div>
-          <h3 className="text-base font-bold text-slate-900">서비스별 DORA 지표 현황</h3>
+          <h3 className="text-base font-bold text-slate-900">서비스별 배포 성과</h3>
           <p className="text-xs text-slate-400 mt-2">
             주요 마이크로서비스 및 파이프라인별 엔지니어링 속도 비교
           </p>
@@ -87,8 +87,8 @@ export function DoraView() {
                 <TableHead className="text-xs font-bold text-slate-400">배포 빈도 (DF)</TableHead>
                 <TableHead className="text-xs font-bold text-slate-400">변경 리드 타임 (LT)</TableHead>
                 <TableHead className="text-xs font-bold text-slate-400">변경 실패율 (CFR)</TableHead>
-                <TableHead className="text-xs font-bold text-slate-400">복구 시간 (MTTR)</TableHead>
-                <TableHead className="text-right text-xs font-bold text-slate-400">DORA 등급</TableHead>
+                <TableHead className="text-xs font-bold text-slate-400">평균 복구 시간</TableHead>
+                <TableHead className="text-right text-xs font-bold text-slate-400">배포 성과 등급</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

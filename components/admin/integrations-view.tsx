@@ -6,13 +6,13 @@ export function IntegrationsView() {
   const { integrations: i, configured, session, error } = useOperations();
   const entries = [
     {
-      name: "GitLab 라이선스",
+      name: "깃랩 라이선스",
       role: "보유 좌석 · 활성 사용자 · 만료일",
       ready: i.gitlabLicense,
       variable: "GITLAB_LICENSE_READ_TOKEN",
     },
     {
-      name: "GitLab 메인터넌스",
+      name: "깃랩 메인터넌스",
       role: "상태 조회 · 관리자 승인 후 변경",
       ready: i.gitlabMaintenance,
       variable: "GITLAB_MAINTENANCE_READ_TOKEN / WRITE_TOKEN",
@@ -46,10 +46,10 @@ export function IntegrationsView() {
     <div className="ops-stack">
       <section className="ops-panel integration-intro">
         <div>
-          <p className="ops-eyebrow">CONNECTED OPERATIONS</p>
+          <p className="ops-eyebrow">운영 데이터 연결</p>
           <h2>운영 데이터가 모이는 곳</h2>
           <p>
-            GitLab과 LGTM을 연결해 상태 확인부터 로그 분석까지 한 흐름으로
+            깃랩과 LGTM을 연결해 상태 확인부터 로그 분석까지 한 흐름으로
             이어갑니다.
           </p>
         </div>
@@ -106,7 +106,7 @@ export function IntegrationsView() {
             <div>
               <strong>서버에 연결 정보 등록</strong>
               <p>
-                GitLab·Loki 토큰은 서버 환경 변수로만 보관합니다. 웹 화면에는
+                깃랩·Loki 토큰은 서버 환경 변수로만 보관합니다. 웹 화면에는
                 입력하지 않습니다.
               </p>
             </div>
@@ -125,7 +125,7 @@ export function IntegrationsView() {
         <div className="ops-inline">
           <a
             className="ops-button"
-            href="https://github.com/majitap/infradash-codex5/blob/main/docs/OPERATIONS-SETUP.md"
+            href="https://github.com/majitap/infradash-codex6/blob/main/docs/OPERATIONS-SETUP.md"
             target="_blank"
             rel="noreferrer"
           >

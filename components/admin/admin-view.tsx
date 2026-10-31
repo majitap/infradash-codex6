@@ -18,7 +18,7 @@ export function AdminView() {
     <div className="ops-stack">
       <section className="ops-panel admin-mode-panel">
         <div>
-          <p className="ops-eyebrow">WORKSPACE ACCESS</p>
+          <p className="ops-eyebrow">운영 권한 관리</p>
           <h2>필요할 때만, 관리자 모드</h2>
           <p>운영 상태를 확인하고 변경 사항을 신중하게 적용하세요.</p>
           <span className="ops-tag">
@@ -47,7 +47,7 @@ export function AdminView() {
       </section>
       {!configured && (
         <p className="ops-notice">
-          현재는 데모입니다. 변경은 새로고침하면 초기화되며 실제 GitLab에
+          현재는 데모입니다. 변경은 새로고침하면 초기화되며 실제 깃랩에
           적용되지 않습니다.
         </p>
       )}
@@ -105,7 +105,7 @@ export function AdminView() {
             <Link href="/admin/integrations">
               <div>
                 <strong>연동 설정</strong>
-                <span>GitLab API와 LGTM 연결 상태</span>
+                <span>깃랩 API와 LGTM 연결 상태</span>
               </div>
               <ArrowUpRight size={20} />
             </Link>
@@ -159,7 +159,7 @@ function MaintenanceForm() {
     <section className="ops-panel maintenance-panel">
       <div className="ops-panel-heading">
         <div>
-          <p className="ops-eyebrow">GITLAB SELF-MANAGED</p>
+          <p className="ops-eyebrow">자체 운영 깃랩</p>
           <h2>메인터넌스 모드</h2>
         </div>
         <span className={maintenance?.enabled ? "ops-tag warning" : "ops-tag"}>
@@ -189,7 +189,7 @@ function MaintenanceForm() {
           type="button"
           role="switch"
           aria-checked={enabled}
-          aria-label="GitLab 메인터넌스 사용"
+          aria-label="깃랩 메인터넌스 사용"
           className="ops-switch"
           disabled={!editable || saving}
           onClick={() => setEnabled(!enabled)}
@@ -238,7 +238,7 @@ function MaintenanceForm() {
             : !editable
               ? "운영 API의 읽기·쓰기 권한과 감사 기록 설정이 필요합니다."
               : configured
-                ? "GitLab Premium / Ultimate · 관리자 권한 필요"
+                ? "깃랩 Premium / Ultimate · 관리자 권한 필요"
                 : "데모 설정만 변경합니다. 실제 인프라에는 영향이 없습니다."}
         </p>
         <div className="ops-inline">
@@ -276,7 +276,7 @@ function MaintenanceForm() {
           </DialogTitle>
           <DialogDescription>
             {configured
-              ? "실제 GitLab에 적용되는 변경입니다."
+              ? "실제 깃랩에 적용되는 변경입니다."
               : "이 브라우저의 데모 설정에만 적용합니다."}
           </DialogDescription>
           <div className="ops-confirm-summary">
@@ -290,7 +290,7 @@ function MaintenanceForm() {
           <p className="ops-description">
             {enabled
               ? "대부분의 쓰기 작업이 제한됩니다. 작업 중인 사용자에게 점검 일정을 먼저 공유해 주세요."
-              : "모드를 끄면 GitLab 쓰기 작업을 다시 허용합니다."}
+              : "모드를 끄면 깃랩 쓰기 작업을 다시 허용합니다."}
           </p>
           <div className="ops-inline ops-dialog-actions">
             <button
@@ -308,7 +308,7 @@ function MaintenanceForm() {
               {saving
                 ? "확인 중…"
                 : configured
-                  ? "실제 GitLab에 적용"
+                  ? "실제 깃랩에 적용"
                   : "데모에 적용"}
             </button>
           </div>

@@ -1,8 +1,9 @@
 {
-  "name": "infradash-codex5",
+  "name": "infradash-codex6",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dashboard:collect": "node --env-file-if-exists=.env.collector.local --import tsx services/collector/dashboard-cli.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -47,5 +48,5 @@
     "tsx": "^4.20.6",
     "typescript": "^5"
   },
-  "description": "8px 그리드 기반 GitLab 인프라 운영 대시보드"
+  "description": "한글과 8px 그리드로 다듬은 깃랩 인프라 운영 대시보드"
 }

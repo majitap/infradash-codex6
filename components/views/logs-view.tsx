@@ -103,7 +103,7 @@ export function LogsView() {
     <div className="ops-stack logs-workspace">
       <section className="ops-panel logs-intro">
         <div>
-          <p className="ops-eyebrow">OBSERVABILITY / LGTM</p>
+          <p className="ops-eyebrow">관측과 로그 분석</p>
           <h2>흩어진 로그에서, 문제의 실마리를.</h2>
           <p>Loki로 검색하고, 서비스와 심각도로 좁혀보세요.</p>
         </div>

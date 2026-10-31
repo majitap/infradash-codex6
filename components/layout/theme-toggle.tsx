@@ -23,11 +23,11 @@ export function ThemeToggle() {
       <DropdownMenuContent align="end" className="min-w-36">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <SunIcon />
-          라이트
+          밝은 화면
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
           <MoonIcon />
-          다크
+          어두운 화면
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <MonitorIcon />

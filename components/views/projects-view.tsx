@@ -192,7 +192,7 @@ export function ProjectsView() {
                     <TableHead className="hidden md:table-cell">가시성</TableHead>
                     <TableHead className="hidden lg:table-cell">활동 (12주)</TableHead>
                     <TableHead className="text-right">30일 커밋</TableHead>
-                    <TableHead className="hidden text-right md:table-cell">MR / 이슈</TableHead>
+                    <TableHead className="hidden text-right md:table-cell">병합 요청 / 이슈</TableHead>
                     <TableHead className="hidden xl:table-cell">파이프라인</TableHead>
                     <TableHead className="hidden text-right xl:table-cell">스토리지</TableHead>
                     <TableHead className="hidden 2xl:table-cell">관리자</TableHead>

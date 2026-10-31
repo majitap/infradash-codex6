@@ -5,6 +5,8 @@ import "./globals.css";
 import "./console.css";
 import "./atelier.css";
 import "./operations.css";
+import "./clarity.css";
+import { DashboardProvider } from "@/components/overview/dashboard-provider";
 import { OperationsProvider } from "@/components/admin/operations-provider";
 
 import { AppSidebar } from "@/components/layout/app-sidebar";
@@ -18,11 +20,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const metadata: Metadata = {
   title: {
-    default: "InfraDash · 흐름을 더 선명하게",
-    template: "%s · InfraDash",
+    default: "인프라대시 · 인프라의 오늘을 선명하게",
+    template: "%s · 인프라대시",
   },
   description:
-    "배포의 흐름과 연결된 인프라를 더 선명하게. 비교 차트와 서비스 맵을 갖춘 GitLab 운영 대시보드. 모의 데이터 데모입니다.",
+    "배포 흐름과 연결된 인프라를 한눈에. 우리 팀의 데이터를 연결하는 한글 인프라 운영 대시보드.",
 };
 
 export default function RootLayout({
@@ -38,31 +40,33 @@ export default function RootLayout({
         </a>
         <ThemeProvider>
           <OperationsProvider>
-            <TooltipProvider>
-              <CommandMenuProvider>
-                <SidebarProvider
-                  style={
-                    {
-                      "--sidebar-width": "16rem",
-                      "--header-height": "5rem",
-                    } as React.CSSProperties
-                  }
-                >
-                  <AppSidebar />
-                  <SidebarInset className="min-w-0">
-                    <SiteHeader />
-                    <div
-                      id="main-content"
-                      tabIndex={-1}
-                      className="flex flex-1 flex-col"
-                    >
-                      <RouteContent>{children}</RouteContent>
-                    </div>
-                  </SidebarInset>
-                </SidebarProvider>
-                <Toaster richColors position="top-right" />
-              </CommandMenuProvider>
-            </TooltipProvider>
+            <DashboardProvider>
+              <TooltipProvider>
+                <CommandMenuProvider>
+                  <SidebarProvider
+                    style={
+                      {
+                        "--sidebar-width": "14rem",
+                        "--header-height": "4.5rem",
+                      } as React.CSSProperties
+                    }
+                  >
+                    <AppSidebar />
+                    <SidebarInset className="min-w-0">
+                      <SiteHeader />
+                      <div
+                        id="main-content"
+                        tabIndex={-1}
+                        className="flex flex-1 flex-col"
+                      >
+                        <RouteContent>{children}</RouteContent>
+                      </div>
+                    </SidebarInset>
+                  </SidebarProvider>
+                  <Toaster richColors position="top-right" />
+                </CommandMenuProvider>
+              </TooltipProvider>
+            </DashboardProvider>
           </OperationsProvider>
         </ThemeProvider>
       </body>

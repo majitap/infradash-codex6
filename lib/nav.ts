@@ -54,7 +54,7 @@ export const navGroups: NavGroup[] = [
   {
     label: "워크스페이스",
     items: [
-      item("개요", "/", LayoutDashboardIcon, "조직 전체 상태와 라이선스 현황"),
+      item("전체 현황", "/", LayoutDashboardIcon, "조직 전체 상태와 라이선스 현황"),
       item(
         "프로젝트",
         "/projects",
@@ -86,7 +86,7 @@ export const navGroups: NavGroup[] = [
         ],
       ),
       item(
-        "CI/CD",
+        "빌드·배포",
         "/pipelines",
         WorkflowIcon,
         "파이프라인·러너·배포 성과",
@@ -133,7 +133,7 @@ export const navGroups: NavGroup[] = [
         ],
       ),
       item(
-        "인시던트",
+        "장애 관리",
         "/incidents",
         SirenIcon,
         "장애 현황과 복구 기록",
@@ -159,7 +159,7 @@ export const navGroups: NavGroup[] = [
         "amber",
       ),
       item(
-        "AI 운영 센터",
+        "지능형 운영",
         "/ai-ops",
         SparklesIcon,
         "인프라 진단과 조치 예시",
@@ -212,7 +212,7 @@ export const navGroups: NavGroup[] = [
             "운영 설정",
             "/admin",
             Settings2Icon,
-            "관리자 모드와 GitLab 메인터넌스",
+            "관리자 모드와 깃랩 메인터넌스",
           ),
           item(
             "라이선스",
@@ -225,7 +225,7 @@ export const navGroups: NavGroup[] = [
             "연동 설정",
             "/admin/integrations",
             PlugIcon,
-            "GitLab·LGTM 연결 준비",
+            "깃랩·LGTM 연결 준비",
             "teal",
           ),
           item(

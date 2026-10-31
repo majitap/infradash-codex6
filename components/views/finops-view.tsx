@@ -80,7 +80,7 @@ export function FinOpsView() {
           </h1>
           <p>어디에 쓰고 있는지, 얼마나 줄일 수 있는지 확인하세요.</p>
         </div>
-        <span className="cost-month">2026년 10월 · USD 기준</span>
+        <span className="cost-month">2026년 10월 · 미국 달러 기준</span>
       </div>
       <div className="cost-kpis">
         <div className="cost-kpi cost-primary">
