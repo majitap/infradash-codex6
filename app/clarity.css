@@ -2076,28 +2076,111 @@ a {
 }
 
 /* Dense labels remain readable at ordinary laptop widths. */
-.brand-header { height: 72px; }
-.workspace-label { padding: 8px; }
-.nav-content, .nav-sections { gap: 16px; }
-.nav-label { margin-bottom: 0; }
-.nav-footer { padding: 8px 16px; }
-.six-metric-label, .six-status-strip strong { font-size: 12px; }
-.six-eyebrow, .six-chart-dates, .six-chart-scale, .six-service-caption,
-.six-map-footer, .six-node-detail p, .six-node-detail strong,
-.six-pipeline-status, .six-duration, .six-list-footer,
-.six-alert-label, .six-alert-description, .six-attention-footer>div>span { font-size: 11px; }
-.six-project>strong { font-size: 13px; }
-.six-project>span { font-size: 10px; line-height: 16px; }
-.six-chart-bottom, .six-chart-bottom strong, .six-pipeline-columns { font-size: 11px; }
-.six-pipeline-row { min-height: 72px; }
-.six-service-map .six-map-node { font-size: 11px; }
-.six-intro { padding: 0; }
-@media(max-width:767px) {
-  .six-metric-label { font-size: 11px; }
-  .six-metric-description { font-size: 10px; }
-  .six-status-strip strong { font-size: 11px; }
-  .six-chart-bottom, .six-chart-bottom strong, .six-pipeline-columns { font-size: 10px; }
-  .six-project>strong { font-size: 12px; }
-  .six-service-map .six-map-node { font-size: 10px; }
-  .six-node-detail p { font-size: 10px; }
+.six-negative {
+  color: #bc6670;
+  font-weight: 650;
+}
+.six-chart-key {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 10px;
+  color: var(--muted-foreground);
+}
+.six-chart-key > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.six-chart-key i {
+  width: 12px;
+  border-top: 2px solid #397bf6;
+}
+.six-chart-key i.prior {
+  border-top: 2px dashed #a7bbd7;
+}
+.six-chart-key i.fail {
+  border-top-color: #e9a1a6;
+}
+.brand-header {
+  height: 72px;
+}
+.workspace-label {
+  padding: 8px;
+}
+.nav-content,
+.nav-sections {
+  gap: 16px;
+}
+.nav-label {
+  margin-bottom: 0;
+}
+.nav-footer {
+  padding: 8px 16px;
+}
+.six-metric-label,
+.six-status-strip strong {
+  font-size: 12px;
+}
+.six-eyebrow,
+.six-chart-dates,
+.six-chart-scale,
+.six-service-caption,
+.six-map-footer,
+.six-node-detail p,
+.six-node-detail strong,
+.six-pipeline-status,
+.six-duration,
+.six-list-footer,
+.six-alert-label,
+.six-alert-description,
+.six-attention-footer > div > span {
+  font-size: 11px;
+}
+.six-project > strong {
+  font-size: 13px;
+}
+.six-project > span {
+  font-size: 10px;
+  line-height: 16px;
+}
+.six-chart-bottom,
+.six-chart-bottom strong,
+.six-pipeline-columns {
+  font-size: 11px;
+}
+.six-pipeline-row {
+  min-height: 72px;
+}
+.six-service-map .six-map-node {
+  font-size: 11px;
+}
+.six-intro {
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .six-metric-label {
+    font-size: 11px;
+  }
+  .six-metric-description {
+    font-size: 10px;
+  }
+  .six-status-strip strong {
+    font-size: 11px;
+  }
+  .six-chart-bottom,
+  .six-chart-bottom strong,
+  .six-pipeline-columns {
+    font-size: 10px;
+  }
+  .six-project > strong {
+    font-size: 12px;
+  }
+  .six-service-map .six-map-node {
+    font-size: 10px;
+  }
+  .six-node-detail p {
+    font-size: 10px;
+  }
 }

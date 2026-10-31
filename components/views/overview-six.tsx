@@ -227,7 +227,13 @@ export function OverviewView() {
                 />
               </div>
               <div className="six-metric-description">
-                <span className="six-positive">
+                <span
+                  className={
+                    summary.delta !== null && summary.delta < 0
+                      ? "six-negative"
+                      : "six-positive"
+                  }
+                >
                   {summary.delta === null
                     ? "비교 기간 부족"
                     : `${summary.delta >= 0 ? "+" : ""}${summary.delta.toFixed(1)}%p`}
@@ -239,7 +245,7 @@ export function OverviewView() {
               <div className="six-metric-label">
                 <span>
                   <Layers3 size={16} />
-                    완료된 파이프라인
+                  완료된 파이프라인
                 </span>
               </div>
               <div className="six-metric-main">

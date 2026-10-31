@@ -82,6 +82,24 @@ export function ActivityChart({
           </span>
         )}
       </div>
+      <div className="six-chart-key">
+        <span>
+          <i />
+          선택 기간
+        </span>
+        {mode === "line" && prior.length === days.length && (
+          <span>
+            <i className="prior" />
+            이전 기간
+          </span>
+        )}
+        {mode === "bar" && (
+          <span>
+            <i className="fail" />
+            실패
+          </span>
+        )}
+      </div>
       <div className="six-chart-plot">
         <div className="six-chart-scale" aria-hidden="true">
           <span>{Math.ceil(maximum)}</span>

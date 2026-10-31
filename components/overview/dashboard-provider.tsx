@@ -83,7 +83,14 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
     } catch (e) {
       if (request.current === controller)
         setError(
-          e instanceof Error ? e.message : "수집 주소에 연결하지 못했습니다.",
+          e instanceof SyntaxError
+            ? "응답이 올바른 데이터 파일 형식이 아닙니다."
+            : e instanceof TypeError ||
+                (e instanceof Error && e.name === "AbortError")
+              ? "수집 주소에 연결하지 못했습니다. 주소와 네트워크를 확인하세요."
+              : e instanceof Error
+                ? e.message
+                : "수집 주소에 연결하지 못했습니다.",
         );
     } finally {
       clearTimeout(timeout);
@@ -116,7 +123,15 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
   async function importFile(file: File) {
     if (file.size > 2_000_000)
       throw new Error("데이터 파일은 2메가바이트 이하여야 합니다.");
-    const parsed = dashboardSchema.safeParse(JSON.parse(await file.text()));
+    let value: unknown;
+    try {
+      value = JSON.parse(await file.text());
+    } catch {
+      throw new Error(
+        "파일을 읽지 못했습니다. 올바른 데이터 파일인지 확인하세요.",
+      );
+    }
+    const parsed = dashboardSchema.safeParse(value);
     if (!parsed.success)
       throw new Error(
         `데이터 형식을 확인하세요: ${parsed.error.issues[0]?.path.join(".") ?? "파일"}`,
